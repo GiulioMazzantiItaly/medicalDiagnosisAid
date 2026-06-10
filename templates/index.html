@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <title>Medical Diagnosis AID</title>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="hero">
+        <p class="eyebrow">Medical Diagnosis AID</p>
+        <h1>Diabetes Risk Prediction</h1>
+        <p class="intro">
+          This tool estimates the likelihood of diabetes from basic clinical measurements.
+          Enter the patient data below and submit the form to get a prediction.
+        </p>
+        <div class="notice">
+          <strong>Important:</strong>
+          This application is for educational purposes only.
+          If you do not know these values, use recent medical results or ask a healthcare professional instead of guessing.
+        </div>
+      </div>
+
+      <form action="/predict" method="post" class="prediction-form">
+        <div class="field">
+          <label for="Pregnancies">Pregnancies</label>
+          <small>Total number of previous pregnancies.</small>
+          <input type="number" id="Pregnancies" name="Pregnancies" step="1" min="0" required>
+        </div>
+
+        <div class="field">
+          <label for="Glucose">Glucose</label>
+          <small>Plasma glucose concentration measured during a clinical test.</small>
+          <input type="number" id="Glucose" name="Glucose" step="any" min="0" required>
+        </div>
+
+        <div class="field">
+          <label for="BloodPressure">Blood Pressure</label>
+          <small>Diastolic blood pressure in mm Hg, usually measured during a medical visit.</small>
+          <input type="number" id="BloodPressure" name="BloodPressure" step="any" min="0" required>
+        </div>
+
+        <div class="field">
+          <label for="SkinThickness">Skin Thickness</label>
+          <small>Triceps skin fold thickness in mm, typically measured by a health professional.</small>
+          <input type="number" id="SkinThickness" name="SkinThickness" step="any" min="0" required>
+        </div>
+
+        <div class="field">
+          <label for="Insulin">Insulin</label>
+          <small>2-hour serum insulin level from a laboratory test.</small>
+          <input type="number" id="Insulin" name="Insulin" step="any" min="0" required>
+        </div>
+
+        <div class="field">
+          <label for="BMI">BMI</label>
+          <small>Body Mass Index, usually computed from height and weight.</small>
+          <input type="number" id="BMI" name="BMI" step="any" min="0" required>
+        </div>
+
+        <div class="field">
+          <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function</label>
+          <small>A dataset score related to family history and hereditary diabetes risk.</small>
+          <input type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" step="any" min="0" required>
+        </div>
+
+        <div class="field">
+          <label for="Age">Age</label>
+          <small>Patient age in years.</small>
+          <input type="number" id="Age" name="Age" step="1" min="0" required>
+        </div>
+
+        <button type="submit" class="submit-button">Predict</button>
+      </form>
+
+      <section class="faq">
+        <h2>Quick help</h2>
+
+        <div class="faq-item">
+          <h3>What is Diabetes Pedigree Function?</h3>
+          <p>
+            It is a numeric score already defined in the dataset.
+            You can describe it as a family history or hereditary diabetes risk score.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What if I do not know some values?</h3>
+          <p>
+            Do not guess. This tool is only a study demo, so the best choice is to use recent medical data or ask a healthcare professional.
+          </p>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
