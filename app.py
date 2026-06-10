@@ -41,10 +41,6 @@ def predict():
     )
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
-
-
 # Adding a route API that accepts JSON input, and gives a JSON output
 @app.route("/predict-json", methods=["POST"])
 def predict_json():
@@ -76,3 +72,7 @@ def predict_json():
         "prediction": prediction,
         "probability": probability,
     })
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
