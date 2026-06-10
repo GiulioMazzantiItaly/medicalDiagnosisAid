@@ -195,6 +195,11 @@ Possible future improvements include:
 - calibration of probabilities
 - stronger input validation in the Flask app
 - better visual reporting of the model output
+- comparison with an LLM-based diagnostic assistant
+- model interpretability with tools such as SHAP or LIME
+- a deeper discussion of bias, fairness, and equity in healthcare datasets
+
+These points were treated as additional ideas and not as mandatory parts of the minimum viable project. For this reason, they were intentionally left as future extensions rather than included in the current MVP.
 
 In conclusion, the project satisfies the main educational requirements of the course: 
 it uses Python, `scikit-learn`, Flask, Git/GitHub-oriented structure, and Docker in a complete but manageable end-to-end workflow.
