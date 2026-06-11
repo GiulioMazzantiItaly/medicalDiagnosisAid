@@ -1,5 +1,5 @@
 # Medical Diagnosis AID
-This is a brief final_report of Medical Diagnosis AID ML project made for IFO-L Laboratorio di informatica course exam by Giulio Mazzanti.
+This is a brief final report of the Medical Diagnosis AID machine learning project made for the IFO-L Laboratorio di informatica applicata course exam by Giulio Mazzanti.
 
 ---
 ## 1. Problem statement
@@ -73,7 +73,7 @@ The preprocessing pipeline was intentionally kept simple and suitable for an MVP
 The following decisions were applied:
 1. `Outcome` was left unchanged because it is the target label.
 2. `Pregnancies` was left unchanged because zero pregnancies is a valid value.
-3. improbable zeros in `Glucose`, `BloodPressure`, `SkinThickness`, `Insulin`, and `BMI` were replaced with missing values.
+3. Improbable zeros in `Glucose`, `BloodPressure`, `SkinThickness`, `Insulin`, and `BMI` were replaced with missing values.
 4. These missing values were then imputed using the **median** of each feature.
 
 After cleaning, the feature matrix `X` and the target vector `y` were created.
@@ -148,7 +148,7 @@ When the form is submitted:
 4. the model generates:
    - a binary prediction
    - a probability for class `1`
-1. the user gets redirected to result.html to see the result
+5. the user gets redirected to `result.html` to see the result
 
 ### JSON workflow
 The `/predict-json` endpoint accepts a POST request with JSON input and returns a JSON response with:
@@ -180,7 +180,7 @@ docker run -p 5000:5000 medical-diagnosis-aid
 
 ---
 ## 8. Limitations and future work
-This project has several limitations because is an MVP.
+This project has several limitations because it is an MVP.
 
 The main limitations are:
 - the dataset is relatively small
